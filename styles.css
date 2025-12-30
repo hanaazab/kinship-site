@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background: #ffffff;
+  color: #000000;
+  min-height: 100vh;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+}
+
+.logo {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  color: #000000;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.5;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 900px;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.rotate-container {
+  display: inline-block;
+  position: relative;
+  min-width: 300px;
+}
+
+.rotate-text {
+  display: inline-block;
+  color: #000000;
+  transition: opacity 0.4s ease-in-out, filter 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.rotate-text.blur-out {
+  opacity: 0;
+  filter: blur(4px);
+  transform: translateY(4px);
+}
+
+.rotate-text.blur-in {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+/* Sparkle particles */
+.sparkle-dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #000000;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  animation: sparkle 0.6s ease-out forwards;
+  animation-delay: var(--delay, 0ms);
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 1;
+    transform: scale(var(--scale-start, 1)) translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(var(--scale-end, 0.5)) translate(var(--dx, 0), var(--dy, 10px));
+  }
+}
