@@ -24,14 +24,17 @@ body {
 
 .logo {
   font-family: 'Times New Roman', Times, serif;
-  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
-  color: #000000;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  color: #ffffff;
+  background: #000000;
   text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 100px;
   transition: opacity 0.2s ease;
 }
 
 .logo:hover {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .hero {
