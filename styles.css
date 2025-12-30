@@ -22,17 +22,6 @@ body {
   z-index: 100;
 }
 
-.logo {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: clamp(2rem, 3vw, 3rem);
-  color: #000000;
-  text-decoration: none;
-  transition: opacity 0.2s ease;
-}
-
-.logo:hover {
-  opacity: 0.5;
-}
 
 .hero {
   min-height: 100vh;
